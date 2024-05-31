@@ -1,0 +1,86 @@
+.slider-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 10px;
+}
+/* range slider styled here, because it has the biggest potential to break in different browsers :) */
+ input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 90%;
+    outline: none ;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.slider-track {
+    width: 90%;
+    height: 8px;
+    background-color: blue;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 4px;
+}
+/* for chrome and safari*/
+
+input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    margin-top: -8px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid blue;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* for firefox*/
+
+input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    height: 8px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    margin-top: -8px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid blue;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* for microsoft*/
+
+input[type="range"]::-ms-track {
+    appearance: none;
+    height: 8px;
+}
+
+input[type="range"]::-ms-thumb {
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    margin-top: -8px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid blue;
+    cursor: pointer;
+    pointer-events: auto;
+}

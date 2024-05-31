@@ -1,0 +1,187 @@
+@media (max-width: 425px) {
+
+    main {
+        width: 90vw;
+        height: auto;
+        margin: 10px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu {
+        width: 90vw;
+        height: 40px;
+        background-color: $secondary-color;
+        display: flex;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        
+        .icons-container {
+            height: 40px;
+            width: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            i {
+                margin-left: 10px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    
+        .searchbar-container {
+            height: 40px;
+            width: 35%;
+            display: flex;
+            align-items: center;
+    
+            input {
+                max-width: 90%;
+                background-color: $primary-color;
+                margin-left: 5px;
+                padding: 5px 0 5px 5px;
+                border: none;
+                border-radius: 4px;
+                font-size: 8px;
+                height: 20px;
+            }
+        }
+    }
+
+    .search {
+        display: none;
+    }
+
+    .results {
+        width: 90vw;
+        height: auto;
+
+        .hotel {
+            height: auto;
+            background-color: $secondary-color;
+            margin-bottom: 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: inherit;
+                height: 300px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .hotel-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 0;
+
+                .hotel-info {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                    padding: 10px;
+
+                    .stars {
+                        color: gold;
+                        margin: 5px 0;
+
+                        i {
+                            margin-right: 2px;
+                        }
+                    }
+
+                    h2 {
+                        color: blue;
+                        margin: 0;
+                        padding-bottom: 5px;
+                        font-size: 22px;
+
+                    }
+
+                    .address {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 16px;
+                    }
+
+                    i {
+                        margin-right: 5px;
+                        font-size: 16px;
+                    }
+
+                    button {
+                        border: none;
+                        color: blue;
+                        background-color: white;
+                        text-align: left;
+                        padding: 0;
+                        margin: 5px 0;
+                        cursor: pointer;
+                    }
+
+                    .distance {
+                        font-size: 16px;
+                        margin-top: 5px;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            font-size: 16px;
+                            margin: 5px 0;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                }
+
+                .price-info {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 200px;
+
+                    .price-big {
+                        font-size: 22px;
+                        color: blue;
+                        font-weight: bold;
+                    }
+
+                    .price-small {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: rgb(57, 56, 56);
+                        text-align: center;
+
+                        small {
+                            font-weight: 400;
+                            font-size: 10px;
+                        }
+                    }
+
+                    button {
+                        @include btn-style();
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-align: center;
+                        margin: 5px;
+                        padding: 5px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+}
